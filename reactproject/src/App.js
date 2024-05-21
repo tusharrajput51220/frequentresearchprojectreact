@@ -8,10 +8,13 @@ import Devices from './components/Devices';
 import FilterOptions from './components/FilterOptions';
 import SubmitSection from './components/SubmitSection';
 import FinalTable from './components/FinalTable';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 function App() {
   return (
     <Router>
+        <ToastContainer />
       <div className="app d-flex">
         <div>
           <Sidebar />

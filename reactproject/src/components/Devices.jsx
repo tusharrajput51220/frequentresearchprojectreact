@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Formik, Form, Field } from 'formik';
 import { AppContext } from '../context/AppContext';
-
+import {toast} from 'react-toastify'
 const Devices = () => {
   const { updateFormData } = useContext(AppContext);
 
@@ -13,6 +13,7 @@ const Devices = () => {
   const handleSubmit = (values) => {
     updateFormData('devices', values);
     console.log('Form Data', values);
+    toast.success("submitted successfully!")
   };
 
   return (

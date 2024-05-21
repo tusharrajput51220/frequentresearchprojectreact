@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Formik, Form, Field } from 'formik';
 import Select from 'react-select';
 import { AppContext } from '../context/AppContext';
-
+import {toast} from 'react-toastify'
 const ProjectInformation = () => {
   const { updateFormData } = useContext(AppContext);
 
@@ -14,6 +14,7 @@ const ProjectInformation = () => {
   const handleSubmit = (values) => {
     updateFormData('projectInformation', values);
     console.log('Form Data', values);
+    toast.success("submitted successfully!")
   };
 
   const countryOptions = [

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
-
+import {toast} from 'react-toastify'
 const Regions = () => {
   const { updateFormData } = useContext(AppContext);
   const [rows, setRows] = useState([{ id: 1, name: '', country: '' }]);

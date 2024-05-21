@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../context/AppContext';
-
+import {toast} from 'react-toastify'
 const FinalTable = () => {
   const { formData, isSubmitted } = useContext(AppContext);
   const [fd, setFd] = useState({});
