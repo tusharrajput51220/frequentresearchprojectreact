@@ -1,9 +1,7 @@
-import React, { createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 
-// Create the context
 export const AppContext = createContext();
 
-// Create a provider component
 export const AppProvider = ({ children }) => {
   const [formData, setFormData] = useState({
     projectInformation: {},
@@ -13,7 +11,8 @@ export const AppProvider = ({ children }) => {
     filterOptions: {},
   });
 
-  // Function to update form data
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const updateFormData = (section, data) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -21,8 +20,12 @@ export const AppProvider = ({ children }) => {
     }));
   };
 
+  const submitFormData = () => {
+    setIsSubmitted(true);
+  };
+
   return (
-    <AppContext.Provider value={{ formData, updateFormData }}>
+    <AppContext.Provider value={{ formData, updateFormData, isSubmitted, submitFormData }}>
       {children}
     </AppContext.Provider>
   );

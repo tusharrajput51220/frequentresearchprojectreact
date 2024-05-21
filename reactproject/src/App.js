@@ -7,15 +7,16 @@ import Specifications from './components/Specifications';
 import Devices from './components/Devices';
 import FilterOptions from './components/FilterOptions';
 import SubmitSection from './components/SubmitSection';
+import FinalTable from './components/FinalTable';
 import './App.css'
 function App() {
   return (
     <Router>
       <div className="app d-flex">
         <div>
-        <Sidebar />
+          <Sidebar />
         </div>
-     
+
         <div className="content">
           <Routes>
             <Route path="/project-information" element={<ProjectInformation />} />
@@ -25,6 +26,9 @@ function App() {
             <Route path="/filter-options" element={<FilterOptions />} />
             <Route path="/submit" element={<SubmitSection />} />
           </Routes>
+          <div>
+            <FinalTable />
+          </div>
         </div>
       </div>
     </Router>
