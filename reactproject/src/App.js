@@ -10,11 +10,14 @@ import SubmitSection from './components/SubmitSection';
 import FinalTable from './components/FinalTable';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './App.css'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import './App.css';
 function App() {
   return (
     <Router>
-        <ToastContainer />
+      <Header />
+      <ToastContainer />
       <div className="app d-flex">
         <div>
           <Sidebar />
@@ -34,6 +37,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </Router>
   );
 }
