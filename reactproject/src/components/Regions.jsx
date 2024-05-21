@@ -7,6 +7,7 @@ const Regions = () => {
 
   const handleAddRow = () => {
     setRows([...rows, { id: rows.length + 1, name: '', country: '' }]);
+    toast.success("added..")
   };
 
   const handleRemoveRow = (id) => {
