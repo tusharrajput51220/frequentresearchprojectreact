@@ -28,11 +28,11 @@ const FinalTable = () => {
       </thead>
       <tbody>
         <tr>
-          <td>{fd?.projectInformation?.projectName}</td>
+          <td>{fd?.projectInformation?.projectName},{fd?.projectInformation?.country}</td>
           <td>{fd?.filterOptions?.option}</td>
-          <td>{fd?.devices?.deviceName}</td>
-          <td>{fd?.regions?.map(region => region.name).join(', ')}</td>
-          <td>{fd?.specifications?.specificationName}</td>
+          <td>{fd?.devices?.deviceName},{fd?.devices?.type}</td>
+          <td>{fd?.regions?.map(region => region?.name).join(', ')},{fd?.regions?.map(region => region?.country).join(', ')}</td>
+          <td>{fd?.specifications?.specificationName},{fd?.specifications?.value}</td>
         </tr>
       </tbody>
     </table>
